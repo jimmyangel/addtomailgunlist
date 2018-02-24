@@ -9,7 +9,7 @@ const CONFIG = require('cloud-functions-runtime-config').getVariables('hm-mailin
   This Google Cloud Function is used to add new members to an arbitrary mailgun mailing list,
   depending on runtime config parameters.
 */
-exports.addToMailingList = (req, res) => {
+exports.addToMailgunList = (req, res) => {
   CORS(req, res, () => {
     if (req.method === 'POST') {
       CONFIG.then((values) => {

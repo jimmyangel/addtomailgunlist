@@ -1,4 +1,4 @@
-# AddToMailgunList
+# addToMailgunList
 
 NOTE: THIS PROJECT IS UNDER DEVELOPMENT, NOT FULLY TESTED YET
 
