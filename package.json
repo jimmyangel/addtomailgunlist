@@ -1,0 +1,16 @@
+{
+  "name": "addtomailgunlist",
+  "version": "0.1.0",
+  "description": "Add member to mailgun mailing list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cloud-functions-runtime-config": "^0.3.0",
+    "cors": "^2.8.4",
+    "mailgun-js": "^0.16.0"
+  }
+}
