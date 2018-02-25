@@ -37,7 +37,7 @@ gcloud functions deploy addToMailgunList --trigger-http
 curl -d "email=someemailt@example.com" -X POST https://myproject.cloudfunctions.net/addToMailgunList
 ```
 
-Function can be invoked from a web page using javascript AJAX POST like below:
+Function can be invoked from a web page using javascript AJAX POST like jQuery example below:
 
 ```
 // POST to mailing list service
@@ -54,7 +54,7 @@ $('#join-button').click(function () {
   return false;
 });
 ```
-Using an HTML form like this:
+Using an HTML form like this example:
 
 ```
 <form id="join-dialog-form" class="form-horizontal" role="form">
