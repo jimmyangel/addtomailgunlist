@@ -1,5 +1,5 @@
 
-const CORS = require('cors')({origin: 'true'}); // API must be accessible
+const CORS = require('cors')({origin: '*'}); // API must be accessible
 const MAILGUN = require('mailgun-js');
 
 // Get configuration variables
