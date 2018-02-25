@@ -3,29 +3,43 @@
 This Google Cloud Function is used to add new members to an arbitrary mailgun mailing list, depending on runtime configuration parameters.
 
 ## Configuration parameters
-`gcloud beta runtime-config configs create hm-mailinglistparms`
+```
+gcloud beta runtime-config configs create hm-mailinglistparms
+```
 
 ### Mailing List
-`gcloud beta runtime-config configs variables set mailinglist "maymailinglist@mydomain.com" --config-name hm-mailinglistparms`
+```
+gcloud beta runtime-config configs variables set mailinglist "maymailinglist@mydomain.com" --config-name hm-mailinglistparms
+```
 
 ### Mailgun API Key
-`gcloud beta runtime-config configs variables set mailgun-api-key "key-XXXXXXXXXXXXXXXXXXXXXXX" --config-name hm-mailinglistparms`
+```
+gcloud beta runtime-config configs variables set mailgun-api-key "key-XXXXXXXXXXXXXXXXXXXXXXX" --config-name hm-mailinglistparms
+```
 
 ### Mailgun Domain
-`gcloud beta runtime-config configs variables set mailgun-domain "mydomain.com" --config-name hm-mailinglistparms`
+```
+gcloud beta runtime-config configs variables set mailgun-domain "mydomain.com" --config-name hm-mailinglistparms
+```
 
 ### Email to send notifications
-`gcloud beta runtime-config configs variables set notification-email "myemail@mydomain.com" --config-name hm-mailinglistparms`
+```
+gcloud beta runtime-config configs variables set notification-email "myemail@mydomain.com" --config-name hm-mailinglistparms
+```
 
 ## Deploy
-`gcloud functions deploy addToMailgunList --trigger-http`
+```
+gcloud functions deploy addToMailgunList --trigger-http
+```
 
 ## Usage
-`curl -d "email=someemailt@example.com" -X POST https://myproject.cloudfunctions.net/addToMailgunList`
+```
+curl -d "email=someemailt@example.com" -X POST https://myproject.cloudfunctions.net/addToMailgunList
+```
 
 Function can be invoked from a web page using javascript AJAX POST like below:
 
-`
+```
 // POST to mailing list service
 $('#join-button').click(function () {
   $.post(MAILGUN_LIST_SERVICE_URL, $('#join-dialog-form').serialize(), function (data) {
@@ -39,10 +53,10 @@ $('#join-button').click(function () {
   });
   return false;
 });
-`
+```
 Using an HTML form like this:
 
-`
+```
 <form id="join-dialog-form" class="form-horizontal" role="form">
   <div class="form-group has-feedback">
     <div class="col-sm-12">
@@ -67,4 +81,4 @@ Using an HTML form like this:
     </div>
   </div>
 </form>
-`
+```
