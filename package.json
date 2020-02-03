@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "cloud-functions-runtime-config": "^0.3.0",
+    "cloud-functions-runtime-config": "^0.4.0",
     "cors": "^2.8.4",
     "mailgun-js": "^0.16.0"
   }
